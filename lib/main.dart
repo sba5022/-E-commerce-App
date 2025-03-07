@@ -1,3 +1,5 @@
+import 'package:appbar/Presentation/ui/screens/home_screen.dart';
+import 'package:appbar/Presentation/ui/screens/main_bottom_nav_screen.dart';
 import 'package:appbar/Presentation/ui/screens/splash_screen.dart';
 import 'package:appbar/application/app.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,7 +20,8 @@ class _QuickCartState extends State<QuickCart> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp (
-      home: SplashScreen(),
+      debugShowCheckedModeBanner: false,
+      home: MainBottomNavScreen(),
     );
   }
 }
