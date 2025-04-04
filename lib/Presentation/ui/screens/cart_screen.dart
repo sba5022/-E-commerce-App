@@ -22,6 +22,7 @@ class _CartScreenState extends State<CartScreen> {
             child: Icon(Icons.arrow_back)),
         title: Text('Carts', style: TextStyle(color: Colors.black),),
       ),
+
     );
   }
 }

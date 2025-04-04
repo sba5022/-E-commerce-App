@@ -7,8 +7,90 @@ class ProductDetailsScreen extends StatefulWidget {
 }
 
 class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
+  List<String>Photolist=[
+    'assets/images/slider.png',
+    'assets/images/woman.png',
+    'assets/images/Boot.png',
+  ];
+  int myslideindex=0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        leading: const BackButton(),
+        backgroundColor: Colors.grey,
+        title: Text('Product Details'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: SizedBox(
+                height: 250,
+                child: PageView.builder(
+                  scrollDirection: Axis.horizontal,
+                    onPageChanged: (Value) {
+                      setState(() {
+                        myslideindex=Value;
+                      });
+                    },
+                    itemCount: Photolist.length,
+                    itemBuilder: ( context, index){
+                      return ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.asset(Photolist[index],fit: BoxFit.cover,),
+                      );
+                    }),
+              ),
+            ),
+            Center(
+              child: SizedBox(
+                height: 55,
+                width: 260,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: Photolist.length,
+                    itemBuilder: (context, index){
+                      return Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: index==myslideindex?Colors.grey:Colors.black,
+                            shape: BoxShape.circle,
+                          ),
+                          height: 20,
+                          width: 20,
+                        ),
+                      );
+                    }),
+              ),
+            ),
+            // SizedBox(
+            //   height: 200,
+            //   width: 200,
+            //   child: ListView.builder(
+            //       scrollDirection: Axis.horizontal,
+            //       itemCount: Photolist.length,
+            //       itemBuilder: (context, index) {
+            //         return Container(
+            //           height: 20,
+            //           width: 20,
+            //           decoration: BoxDecoration(
+            //             color: Colors.red,
+            //             shape: BoxShape.circle
+            //           ),
+            //         );
+            //       }),
+            // )
+            Row(
+              children: [
+                Text('Adiddas Shoe HK34895- Black Edition')
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
