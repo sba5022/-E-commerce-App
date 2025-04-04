@@ -22,7 +22,7 @@ class CategoryCard extends StatelessWidget {
           SizedBox(
             height: 8,
           ),
-          Text('Electronics', style: TextStyle(
+          Text('Food', style: TextStyle(
             fontSize: 14,
             color: Colors.black,
           ),),
