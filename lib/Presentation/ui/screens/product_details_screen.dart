@@ -1,3 +1,4 @@
+import 'package:appbar/Widgets/custom_stepper.dart';
 import 'package:flutter/material.dart';
 class ProductDetailsScreen extends StatefulWidget {
   const ProductDetailsScreen({super.key});
@@ -85,7 +86,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             // )
             Row(
               children: [
-                Text('Adiddas Shoe HK34895- Black Edition')
+                Text('Adiddas Shoe HK34895- Black Edition', style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
+              letterSpacing: 0.5,
+            ),),
               ],
             )
           ],
