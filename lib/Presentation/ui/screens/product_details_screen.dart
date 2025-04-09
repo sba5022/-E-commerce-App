@@ -92,7 +92,26 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               letterSpacing: 0.5,
             ),),
               ],
-            )
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('\$90'),
+                Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: [
+                    Icon(Icons.star, size: 15, color: Colors.amber,),
+                    Text('4.8'),
+                  ],
+                ),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: Icon(Icons.favorite, size: 15,color: Colors.red,),
+                  ) ,
+                )
+              ],
+            ),
           ],
         ),
       ),
