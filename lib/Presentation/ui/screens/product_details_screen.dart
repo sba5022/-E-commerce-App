@@ -84,33 +84,39 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             //         );
             //       }),
             // )
-            Row(
-              children: [
-                Text('Adiddas Shoe HK34895- Black Edition', style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 0.5,
-            ),),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('\$90'),
-                Wrap(
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  children: [
-                    Icon(Icons.star, size: 15, color: Colors.amber,),
-                    Text('4.8'),
-                  ],
-                ),
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Icon(Icons.favorite, size: 15,color: Colors.red,),
-                  ) ,
-                )
-              ],
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text('Adiddas Shoe HK34895- Black Edition', style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 0.5,
+                  ),),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text('\$90'),
+                      Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        children: [
+                          Icon(Icons.star, size: 15, color: Colors.amber,),
+                          Text('4.8'),
+                        ],
+                      ),
+                      Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(2.0),
+                          child: Icon(Icons.favorite, size: 15,color: Colors.red,),
+                        ) ,
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
