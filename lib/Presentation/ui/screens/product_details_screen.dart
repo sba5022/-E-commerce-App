@@ -87,6 +87,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
@@ -115,6 +116,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       )
                     ],
                   ),
+                  Text('Color', style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black
+                  ),)
                 ],
               ),
             ),
