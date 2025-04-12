@@ -14,6 +14,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     'assets/images/Boot.png',
   ];
   int myslideindex=0;
+  List<Color> colors=[
+    Colors.black,
+    Colors.green,
+    Colors.blue,
+    Colors.yellow,
+  ];
+  int _selectedColorsIndex=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -120,7 +127,23 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     fontSize: 20,
                     fontWeight: FontWeight.w700,
                     color: Colors.black
-                  ),)
+                  ),),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                    height: 30,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                        itemCount: colors.length,
+                        itemBuilder: (context, index ){
+                      return CircleAvatar(
+                        backgroundColor: colors[index],
+                        child: _selectedColorsIndex =  index ? const Icon(Icons.done, color: Colors.white,) : null,
+                      );
+                    }
+                    ),
+                  )
                 ],
               ),
             ),
