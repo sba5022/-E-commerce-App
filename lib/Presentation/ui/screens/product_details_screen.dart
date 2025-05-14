@@ -20,6 +20,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     Colors.blue,
     Colors.yellow,
   ];
+  List<String> sizes=[
+'S',
+    'M',
+    'L',
+    'XL',
+    'XXL',
+  ];
   int _selectedColorsIndex=0;
   @override
   Widget build(BuildContext context) {
@@ -139,11 +146,18 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         itemBuilder: (context, index ){
                       return CircleAvatar(
                         backgroundColor: colors[index],
-                        child: _selectedColorsIndex =  index ? const Icon(Icons.done, color: Colors.white,) : null,
                       );
-                    }
+                    },
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 50,
+                    child: Text('Size', style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black
+                    ),),
+                  ),
                 ],
               ),
             ),
