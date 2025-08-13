@@ -27,14 +27,14 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     'XL',
     'XXL',
   ];
-  int _selectedColorsIndex=0;
+  int _selectedColorsindex =0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: const BackButton(),
         backgroundColor: Colors.grey,
-        title: Text('Product Details'),
+        title: const Text('Product Details'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -99,68 +99,121 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             //       }),
             // )
             Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Adiddas Shoe HK34895- Black Edition', style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 0.5,
-                  ),),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text('\$90'),
-                      Wrap(
-                        crossAxisAlignment: WrapCrossAlignment.center,
+                      const Row(
                         children: [
-                          Icon(Icons.star, size: 15, color: Colors.amber,),
-                          Text('4.8'),
+                          Text('Adiddas Shoe HK34895- Black Edition', style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 0.5,
+                      ),),
                         ],
                       ),
-                      Card(
-                        child: Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: Icon(Icons.favorite, size: 15,color: Colors.red,),
-                        ) ,
-                      )
-                    ],
-                  ),
-                  Text('Color', style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black
-                  ),),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  SizedBox(
-                    height: 30,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                        itemCount: colors.length,
-                        itemBuilder: (context, index ){
-                      return CircleAvatar(
-                        backgroundColor: colors[index],
-                      );
-                    },
-                    ),
-                  ),
-                  SizedBox(
-                    height: 50,
-                    child: Text('Size', style: TextStyle(
-                        fontSize: 25,
+                      const Row(
+                        children: [
+                          Text('\$90'),
+                          Wrap(
+                            crossAxisAlignment: WrapCrossAlignment.center,
+                            children: [
+                              Icon(Icons.star, size: 15, color: Colors.amber,),
+                              Text('4.8'),
+                            ],
+                          ),
+                          Card(
+                            child: Padding(
+                              padding: EdgeInsets.all(2.0),
+                              child: Icon(Icons.favorite, size: 15,color: Colors.red,),
+                            ) ,
+                          )
+                        ],
+                      ),
+                      const Text('Color', style: TextStyle(
+                        fontSize: 20,
                         fontWeight: FontWeight.w700,
                         color: Colors.black
-                    ),),
+                      ),),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      SizedBox(
+                        height: 30,
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                            itemCount: colors.length,
+                            itemBuilder: (context, index ){
+                          return CircleAvatar(
+                            backgroundColor: colors[index],
+                          );
+                        },
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 50,
+                        child: Text('Size', style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black
+                        ),),
+                      ),
+                      SizedBox(
+                        height: 25,
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: sizes.length,
+                          itemBuilder: (context, index ){
+                            return Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 8),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                border: Border.all(color: Colors.grey)
+                              ),
+                              alignment: Alignment.center,
+                              child: Text(sizes[index]),
+                            );
+                          },
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text('Description', style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.black
+                      ),),
+                  const Text( '''Shoes serve multiple purposes beyond basic protection. They are worn for hygiene, comfort, and style, and can be designed for specific activities such as athletic performance, dancing, or safety in industrial environments.
+                ''')
+                    ],
                   ),
-                ],
-              ),
-            ),
+                ),
+SizedBox(
+  height: 20,
+),
+Container(
+  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+  decoration: BoxDecoration(
+    color: Colors.grey
+  ),
+  child: Row(
+    children: [
+      Column(
+        children: [
+          Text('Price', style: TextStyle(
+            fontWeight: FontWeight.w700,
+          ),),
+          Text('\$295'),
+        ],
+      ),
+      SizedBox(
+        width: 250,
+      ),
+      ElevatedButton(onPressed: (){}, child: Text('Add to Cart')),
+    ],
+  ),
+)
           ],
         ),
       ),
