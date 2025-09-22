@@ -112,22 +112,30 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       ),),
                         ],
                       ),
-                      const Row(
+                      Column(
                         children: [
-                          Text('\$90'),
-                          Wrap(
-                            crossAxisAlignment: WrapCrossAlignment.center,
+                          Row(
                             children: [
-                              Icon(Icons.star, size: 15, color: Colors.amber,),
-                              Text('4.8'),
+                              const Text('\$90'),
+                              const Wrap(
+                                crossAxisAlignment: WrapCrossAlignment.center,
+                                children: [
+                                  Icon(Icons.star, size: 15, color: Colors.amber,),
+                                  Text('4.8'),
+                                ],
+                              ),
+                              TextButton(
+                                  onPressed: () { }, child: const Text('Reviews', style: TextStyle(
+                                  fontSize: 12
+                              ),)),
+                              const Card(
+                                child: Padding(
+                                  padding: EdgeInsets.all(2.0),
+                                  child: Icon(Icons.favorite, size: 15,color: Colors.red,),
+                                ) ,
+                              )
                             ],
                           ),
-                          Card(
-                            child: Padding(
-                              padding: EdgeInsets.all(2.0),
-                              child: Icon(Icons.favorite, size: 15,color: Colors.red,),
-                            ) ,
-                          )
                         ],
                       ),
                       const Text('Color', style: TextStyle(
