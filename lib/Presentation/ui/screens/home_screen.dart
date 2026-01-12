@@ -117,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 2,
             ),
             HomeSectionTitle(
-              title: ' Categories',
+              title: '  my Categories',
               onTap: (){
                 Get.to(CategoryListScreen());
               },
