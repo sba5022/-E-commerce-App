@@ -42,7 +42,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             Padding(
               padding: const EdgeInsets.all(20),
               child: SizedBox(
-                height: 240,
+                height: 230,
                 child: PageView.builder(
                   scrollDirection: Axis.horizontal,
                     onPageChanged: (Value) {
@@ -75,7 +75,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             shape: BoxShape.circle,
                           ),
                           height: 30,
-                          width: 40,
+                          width: 30,
                         ),
                       );
                     }),
