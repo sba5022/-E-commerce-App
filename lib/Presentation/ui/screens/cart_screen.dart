@@ -30,7 +30,7 @@ class _CartScreenState extends State<CartScreen> {
                  children: [
                   Container(
                     height: 100,
-                    width: 100,
+                    width: 90,
                     color: Colors.purple,
                   )
                  ],
