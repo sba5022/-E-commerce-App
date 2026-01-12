@@ -75,7 +75,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             shape: BoxShape.circle,
                           ),
                           height: 30,
-                          width: 20,
+                          width: 30,
                         ),
                       );
                     }),
