@@ -74,7 +74,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             color: index==myslideindex?Colors.grey:Colors.black,
                             shape: BoxShape.circle,
                           ),
-                          height: 25,
+                          height: 30,
                           width: 20,
                         ),
                       );
