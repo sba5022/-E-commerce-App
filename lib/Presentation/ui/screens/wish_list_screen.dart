@@ -30,7 +30,7 @@ class _CategoryListScreenState extends State<WishListScreen> {
                 crossAxisSpacing: 4,
                 mainAxisSpacing: 4,
               ),
-              itemCount: 16,
+              itemCount: 18,
               itemBuilder: ( context, index){
                 return FittedBox(child: ProductCard());
               } ),
