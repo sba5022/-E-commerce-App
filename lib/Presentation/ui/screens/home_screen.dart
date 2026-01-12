@@ -117,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 2,
             ),
             HomeSectionTitle(
-              title: 'Categories',
+              title: ' Categories',
               onTap: (){
                 Get.to(CategoryListScreen());
               },
@@ -130,6 +130,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (context, index){
                    return CategoryCard();
               }),
+
+            ),
+            SizedBox(
+              height: 4,
+            ),
+            SizedBox(
+              height: 80,
+              child: ListView.builder(
+                  itemCount: 10,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index){
+                    return CategoryCard();
+                  }),
+
             ),
             SizedBox(
               height: 4,
